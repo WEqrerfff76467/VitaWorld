@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вітаміни: історія відкриття та роль в організмі</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-emerald-500 selection:text-white">
+
+    <!-- Navigation -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+                        <i data-lucide="pill" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-emerald-700 via-teal-700 to-cyan-800 bg-clip-text text-transparent">
+                        VitaWorld
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm font-medium">
+                    <a href="#history" class="px-3 py-2 rounded-lg text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 transition">Історія</a>
+                    <a href="#catalog" class="px-3 py-2 rounded-lg text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 transition">Каталог вітамінів</a>
+                    <a href="#calculator" class="px-3 py-2 rounded-lg text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 transition">Калькулятор</a>
+                    <a href="#basket" class="px-3 py-2 rounded-lg text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 transition">Тарілка вітамінів</a>
+                    <a href="#quiz" class="px-3 py-2 rounded-lg text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 transition">Вікторина</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 bg-white px-4 pt-2 pb-4 space-y-1">
+            <a href="#history" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-600">Історія відкриття</a>
+            <a href="#catalog" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-600">Енциклопедія</a>
+            <a href="#calculator" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-600">Калькулятор норм</a>
+            <a href="#basket" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-600">Кошик продуктів</a>
+            <a href="#quiz" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-600">Тест знань</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-emerald-50/60 via-teal-50/30 to-slate-50 pt-12 pb-20 md:pt-20 md:pb-28">
+        <div class="absolute top-0 right-0 -mt-12 -mr-12 w-96 h-96 bg-emerald-200/40 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -mb-12 -ml-12 w-96 h-96 bg-cyan-200/40 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-emerald-100/80 border border-emerald-200 text-emerald-800 text-xs sm:text-sm font-semibold mb-6">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-emerald-600"></i>
+                    <span>Інтерактивна біологічна платформа</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                    Вітаміни: <span class="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">сила життя</span> у кожній молекулі
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-600 mb-8 leading-relaxed">
+                    Дізнайтеся, як великі відкриття вчених змінили уявлення про харчування, та дослідіть ключову роль вітамінів у підтримці вашого здоров'я та енергії.
+                </p>
+
+                <!-- Search & Quick Navigation -->
+                <div class="relative max-w-xl mx-auto mb-10">
+                    <div class="relative flex items-center">
+                        <i data-lucide="search" class="absolute left-4 w-5 h-5 text-slate-400"></i>
+                        <input id="hero-search" type="text" placeholder="Швидкий пошук вітаміну (наприклад: С, Ретинол, B12)..." 
+                               class="w-full pl-12 pr-28 py-4 bg-white rounded-2xl shadow-lg shadow-slate-200/60 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-800 placeholder-slate-400 transition">
+                        <a href="#catalog" class="absolute right-2 px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-sm font-semibold transition flex items-center gap-1.5">
+                            Шукати
+                        </a>
+                    </div>
+                    <!-- Search Results Dropdown -->
+                    <div id="search-results" class="hidden absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-slate-100 z-50 max-h-60 overflow-y-auto text-left"></div>
+                </div>
+
+                <!-- Quick Stats / Badges -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto pt-4">
+                    <div class="p-4 rounded-2xl bg-white/60 border border-slate-200/60 shadow-sm text-center">
+                        <span class="block text-2xl font-bold text-emerald-600">13</span>
+                        <span class="text-xs text-slate-500 font-medium">Основних вітамінів</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white/60 border border-slate-200/60 shadow-sm text-center">
+                        <span class="block text-2xl font-bold text-teal-600">2 види</span>
+                        <span class="text-xs text-slate-500 font-medium">Водо- та Жиророзчинні</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white/60 border border-slate-200/60 shadow-sm text-center">
+                        <span class="block text-2xl font-bold text-amber-600">1912</span>
+                        <span class="text-xs text-slate-500 font-medium">Рік введення терміну</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white/60 border border-slate-200/60 shadow-sm text-center">
+                        <span class="block text-2xl font-bold text-cyan-600">100%</span>
+                        <span class="text-xs text-slate-500 font-medium">Важливість для життя</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="history" class="py-16 sm:py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">Хронологія відкриття вітамінів</h2>
+                <p class="text-slate-600 text-lg">Шлях від загадкових хвороб (цинги, бері-бері) до наукового тріумфу та розуміння мікронутрієнтів.</p>
+            </div>
+
+            <!-- Timeline track -->
+            <div class="relative">
+                <!-- Vertical Line for large screens -->
+                <div class="hidden lg:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-200 via-teal-300 to-cyan-200"></div>
+
+                <div id="timeline-container" class="space-y-12 lg:space-y-16">
+                    <!-- Dynamic Timeline Content Rendered via JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section id="catalog" class="py-16 sm:py-24 bg-slate-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">Енциклопедія вітамінів</h2>
+                <p class="text-slate-600 text-lg mb-8">Вивчіть біологічну роль, джерела та ознаки дисбалансу кожного вітаміну.</p>
+
+                <!-- Filter Buttons -->
+                <div class="inline-flex p-1.5 rounded-2xl bg-slate-200/80 space-x-1">
+                    <button class="filter-btn active-filter px-5 py-2.5 rounded-xl text-sm font-semibold transition" data-filter="all">Всі вітаміни</button>
+                    <button class="filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition text-slate-600 hover:text-slate-900" data-filter="water">Водорозчинні (C, група B)</button>
+                    <button class="filter-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition text-slate-600 hover:text-slate-900" data-filter="fat">Жиророзчинні (A, D, E, K)</button>
+                </div>
+            </div>
+
+            <!-- Vitamin Cards Grid -->
+            <div id="vitamin-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamically Inserted Vitamin Cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Vitamin Detail Modal -->
+    <div id="vitamin-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto custom-scrollbar shadow-2xl border border-slate-100 p-6 sm:p-8 relative animate-fade-in">
+            <button id="close-modal" class="absolute top-6 right-6 p-2 rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 transition">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div id="modal-content">
+                <!-- Modal Dynamic Content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-emerald-900 via-slate-900 to-teal-950 rounded-3xl text-white p-6 sm:p-12 shadow-2xl relative overflow-hidden">
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-emerald-500/20 rounded-full blur-3xl"></div>
+
+                <div class="max-w-3xl mb-10">
+                    <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-semibold mb-3">Персоналізований розрахунок</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Калькулятор добової потреби</h2>
+                    <p class="text-slate-300">Розрахуйте орієнтовні норми споживання вітамінів залежно від вашого віку, статі, фізичної активності та типу харчування.</p>
+                </div>
+
+                <form id="calc-form" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Вік (років)</label>
+                        <input type="number" id="calc-age" value="25" min="1" max="100" class="w-full px-4 py-3 rounded-xl bg-slate-800/80 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-emerald-400">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Стать</label>
+                        <select id="calc-gender" class="w-full px-4 py-3 rounded-xl bg-slate-800/80 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-emerald-400">
+                            <option value="male">Чоловіча</option>
+                            <option value="female">Жіноча</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Фізична активность</label>
+                        <select id="calc-activity" class="w-full px-4 py-3 rounded-xl bg-slate-800/80 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-emerald-400">
+                            <option value="low">Низька (сидячий спосіб)</option>
+                            <option value="moderate" selected>Помірна (1-3 тренування)</option>
+                            <option value="high">Висока (інтенсивні навантаження)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">Раціон харчування</label>
+                        <select id="calc-diet" class="w-full px-4 py-3 rounded-xl bg-slate-800/80 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-emerald-400">
+                            <option value="omnivore">Всеїдний (збалансований)</option>
+                            <option value="vegetarian">Вегетаріанський</option>
+                            <option value="vegan">Веганський</option>
+                        </select>
+                    </div>
+                </form>
+
+                <div class="text-center sm:text-left mb-8">
+                    <button type="button" id="calc-btn" class="px-8 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-bold rounded-xl shadow-lg shadow-emerald-500/30 transition">
+                        Розрахувати індивідуальні норми
+                    </button>
+                </div>
+
+                <!-- Results Output Area -->
+                <div id="calc-results" class="hidden pt-8 border-t border-slate-800">
+                    <h3 class="text-xl font-bold mb-4 text-emerald-400">Ваші рекомендовані норми:</h3>
+                    <div id="calc-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-6">
+                        <!-- Populated dynamically -->
+                    </div>
+                    <div id="calc-advice" class="p-4 rounded-xl bg-slate-800/90 border border-slate-700 text-sm text-slate-300">
+                        <!-- Personal advice populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Vitamin Food Basket -->
+    <section id="basket" class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">Інтерактивна Вітамінна Тарілка</h2>
+                <p class="text-slate-600 text-lg">Обирайте продукти для вашого денного раціону та дивіться, якими вітамінами збагачується ваш організм!</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <!-- Available Foods Grid -->
+                <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <i data-lucide="apple" class="w-5 h-5 text-emerald-600"></i>
+                        Додайте продукти до тарілки:
+                    </h3>
+                    <div id="food-items-container" class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+                        <!-- Dynamically populated food cards -->
+                    </div>
+                </div>
+
+                <!-- Selected Foods & Vitamin Meter -->
+                <div class="lg:col-span-5 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm sticky top-24">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            <i data-lucide="shopping-bag" class="w-5 h-5 text-emerald-600"></i>
+                            Ваш раціон
+                        </h3>
+                        <button id="clear-basket" class="text-xs font-semibold text-rose-500 hover:text-rose-700 transition hidden">
+                            Очистити
+                        </button>
+                    </div>
+
+                    <!-- Selected Items list -->
+                    <div id="selected-foods-list" class="flex flex-wrap gap-2 mb-6 min-h-[50px] p-3 rounded-2xl bg-slate-50 border border-slate-200/60">
+                        <p id="empty-basket-msg" class="text-xs text-slate-400 m-auto">Натисніть на продукти ліворуч, щоб додати їх сюди</p>
+                    </div>
+
+                    <!-- Accumulated Vitamins Bar -->
+                    <h4 class="text-sm font-bold text-slate-800 mb-3">Отримані вітаміни:</h4>
+                    <div id="basket-vitamins-summary" class="space-y-3">
+                        <p class="text-xs text-slate-400 italic">Додайте продукти для розрахунку вмісту вітамінів</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Quiz Section -->
+    <section id="quiz" class="py-16 sm:py-24 bg-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-bold uppercase tracking-wider">Перевірка знань</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Вітамінний Експерт</h2>
+                <p class="text-slate-600 mt-2">Дайте відповідь на декілька запитань та отримайте свій іменний сертифікат знавця вітамінів!</p>
+            </div>
+
+            <div id="quiz-card" class="bg-gradient-to-b from-slate-50 to-emerald-50/30 rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-xl">
+                <!-- Quiz start view -->
+                <div id="quiz-start" class="text-center py-8">
+                    <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-inner">
+                        <i data-lucide="award" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-3">Готові скласти тест?</h3>
+                    <p class="text-slate-600 max-w-md mx-auto mb-8 text-sm sm:text-base">Тест складається з 5 запитань з миттєвим поясненням правильних відповідей.</p>
+                    <button id="start-quiz-btn" class="px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl shadow-lg shadow-emerald-600/30 transition hover:scale-105">
+                        Розпочати вікторину
+                    </button>
+                </div>
+
+                <!-- Quiz Questions view (Hidden initially) -->
+                <div id="quiz-body" class="hidden">
+                    <div class="flex justify-between items-center text-xs font-semibold text-slate-500 mb-4">
+                        <span id="quiz-progress-text">Питання 1 з 5</span>
+                        <span id="quiz-score-live">Бал: 0</span>
+                    </div>
+                    <div class="w-full bg-slate-200 h-2 rounded-full mb-8 overflow-hidden">
+                        <div id="quiz-progress-bar" class="bg-emerald-500 h-full w-1/5 transition-all duration-300"></div>
+                    </div>
+
+                    <h3 id="quiz-question" class="text-xl sm:text-2xl font-bold text-slate-900 mb-6"></h3>
+
+                    <div id="quiz-options" class="space-y-3 mb-6">
+                        <!-- Dynamic options buttons -->
+                    </div>
+
+                    <div id="quiz-explanation" class="hidden p-4 rounded-xl bg-slate-100 border border-slate-200 text-sm mb-6"></div>
+
+                    <div class="text-right">
+                        <button id="next-question-btn" class="hidden px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition">
+                            Наступне питання →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Results view (Hidden initially) -->
+                <div id="quiz-result" class="hidden text-center py-6">
+                    <div class="w-20 h-20 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="trophy" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-3xl font-extrabold text-slate-900 mb-2">Вітаємо!</h3>
+                    <p id="quiz-final-score" class="text-lg text-slate-600 mb-6"></p>
+                    
+                    <div class="max-w-md mx-auto p-6 bg-white rounded-2xl border-2 border-dashed border-emerald-300 shadow-md mb-8">
+                        <i data-lucide="medal" class="w-8 h-8 text-emerald-600 mx-auto mb-2"></i>
+                        <h4 class="font-bold text-emerald-800 uppercase tracking-wider text-xs">Офіційний сертифікат</h4>
+                        <p class="font-bold text-slate-800 text-xl mt-1" id="certificate-title">Знавець Вітамінів</p>
+                        <p class="text-xs text-slate-500 mt-2">Успішно пройдено інтерактивний курс з нутриціології</p>
+                    </div>
+
+                    <button id="restart-quiz-btn" class="px-6 py-3 bg-slate-800 hover:bg-slate-900 text-white font-semibold rounded-xl transition">
+                        Пройти знову
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center text-white font-bold">
+                        V
+                    </div>
+                    <span class="text-lg font-bold text-white">VitaWorld UA</span>
+                </div>
+                <p class="text-sm text-center md:text-left">
+                    © 2026 Освітній проєкт про вітаміни та здоров'я. Інформація має ознайомчий характер.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#history" class="text-xs hover:text-white transition">Історія</a>
+                    <a href="#catalog" class="text-xs hover:text-white transition">Каталог</a>
+                    <a href="#quiz" class="text-xs hover:text-white transition">Тест</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const timelineData = [
+            {
+                year: "1881",
+                title: "Експерименти Миколи Луніна",
+                researcher: "Микола Лунін",
+                desc: "Російський вчений довів, що миші, які харчувалися тільки штучною сумішшю із чистих білків, жирів, вуглеводів та солей, гинули. Це довело наявність незамінних незафіксованих речовин у натуральному молоці.",
+                icon: "flask-conical"
+            },
+            {
+                year: "1897",
+                title: "Загадка хвороби Бері-Бері",
+                researcher: "Християн Ейкман",
+                desc: "Нідерландський лікар виявив, що полірований білий рис викликає у курей хворобу бері-бері, а лушпиння (висівки) містить речовину, що лікує її (пізніше названу вітаміном B1). Отримав Нобелівську премію у 1929 році.",
+                icon: "microscope"
+            },
+            {
+                year: "1912",
+                title: "Введення терміну 'Вітамін'",
+                researcher: "Казимир Функ",
+                desc: "Польський біохімік Казимир Функ виділив активну речовину з рисових висівок і запропонував назву «Вітамін» (від латинського 'vita' — життя та 'amine' — амін, азотовмісна сполука).",
+                icon: "bookmark"
+            },
+            {
+                year: "1928 - 1932",
+                title: "Відкриття Аскорбінової кислоти (Вітамін C)",
+                researcher: "Альберт Сент-Дьйордьї & Фредерік Гопкінс",
+                desc: "Сент-Дьйордьї ізолював гексуронову кислоту з перцю та надниркових залоз і довів, що це і є протицинготний вітамін С. У 1937 році він отримав Нобелівську премію.",
+                icon: "award"
+            },
+            {
+                year: "1948",
+                title: "Відкриття Вітаміну B12",
+                researcher: "Мері Шоу Шорб & Карл Фолькерс",
+                desc: "Був ізольований останній з основних вітамінів — B12 (ціанокобаламін), який виявився ключовим елементом у лікуванні злоякісної анемії.",
+                icon: "dna"
+            }
+        ];
+
+        const vitaminsData = [
+            {
+                id: "c",
+                code: "Вітамін C",
+                name: "Аскорбінова кислота",
+                type: "water",
+                color: "amber",
+                role: "Потужний антиоксидант, синтез колагену, зміцнення імунітету та судин, покращення засвоєння заліза.",
+                dose: "75-90 мг/день",
+                sources: ["Цитрусові", "Шипшина", "Болгарський перець", "Броколі", "Полуниця"],
+                deficiency: "Цинга (кровоточивість ясен), слабкий імунітет, повільне загоєння ран, втома.",
+                excess: "Розлади шлунку, ризик утворення каменів у нирках при значному тривалому передозуванні.",
+                details: "Вітамін C є вразливим до високих температур і швидко руйнується при термічній обробці їжі."
+            },
+            {
+                id: "a",
+                code: "Вітамін A",
+                name: "Ретинол / Бета-каротин",
+                type: "fat",
+                color: "orange",
+                role: "Підтрика зору (особливо сутінкового), здоров'я шкіри та слизових оболонок, регенерація клітин.",
+                dose: "700-900 мкг/день",
+                sources: ["Морква", "Печінка", "Вершкове масло", "Яєчний жовток", "Гарбуз"],
+                deficiency: "«Куряча сліпота» (поганий зір у темряві), сухість шкіри та очей, зниження імунітету.",
+                excess: "Гіпервітаміноз А: нудота, головний біль, ураження печінки, токсичність під час вагітності.",
+                details: "Бета-каротин з рослин перетворюється на вітамін A в організмі та краще засвоюється з жирами."
+            },
+            {
+                id: "d",
+                code: "Вітамін D",
+                name: "Кальциферол",
+                type: "fat",
+                color: "yellow",
+                role: "Регуляція обміну кальцію та фосфору, міцність кісток і зубів, підтримка імунітету та нервової системи.",
+                dose: "600-800 МО (15-20 мкг)/день",
+                sources: ["Жирна риба (лосось, оселедець)", "Печінка тріски", "Яєчний жовток", "Сонячне світло (синтез у шкірі)"],
+                deficiency: "Рахіт у дітей, остеопороз і розм'якшення кісток у дорослих, часті застуди.",
+                excess: "Надлишок кальцію в крові (гіперкальціємія), відкладення кальцію в нирках та судинах.",
+                details: "Синтезується в шкірі під дією ультрафіолетових променів сонця (УФ-B)."
+            },
+            {
+                id: "e",
+                code: "Вітамін E",
+                name: "Токоферол",
+                type: "fat",
+                color: "emerald",
+                role: "Головний захисник клітинних мембран від окиснення, здоров'я репродуктивної системи та шкіри.",
+                dose: "15 мг/день",
+                sources: ["Рослинні олії", "Мигдаль", "Горіхи", "Насіння соняшнику", "Авокадо"],
+                deficiency: "Гемолітична анемія, м'язова слабкість, порушення координації рухів.",
+                excess: "Підвищений ризик кровотеч через розрідження крові.",
+                details: "Токоферол у перекладі з грецької означає «той, що приносить потомство»."
+            },
+            {
+                id: "b1",
+                code: "Вітамін B1",
+                name: "Тиамін",
+                type: "water",
+                color: "teal",
+                role: "Вуглеводний обмін, забезпечення енергією головного мозку та нервової системи, робота серця.",
+                dose: "1.1-1.2 мг/день",
+                sources: ["Овес", "Цільнозерновий хліб", "Свинина", "Бобові", "Горіхи"],
+                deficiency: "Хвороба Бері-Бері (ураження нервової та серцево-судинної систем), слабкість, дратівливість.",
+                excess: "Дуже низька токсичність, надлишок виводиться нирками.",
+                details: "Перший виявлений вітамін групи B."
+            },
+            {
+                id: "b12",
+                code: "Вітамін B12",
+                name: "Ціанокобаламін",
+                type: "water",
+                color: "cyan",
+                role: "Кровотворення (утворення еритроцитів), синтез ДНК, підтримка мієлінових оболонок нервів.",
+                dose: "2.4 мкг/день",
+                sources: ["Яловичина", "Печінка", "Риба", "Морепродукти", "Молочні продукти", "Яйця"],
+                deficiency: "Мегалобласна анемія, неврологічні розлади, оніміння кінцівок, погіршення пам'яті.",
+                excess: "Малотоксичний, практично не викликає гіпервітамінозу.",
+                details: "Міститься виключно у продуктах тваринного походження (строгим веганам потрібні добавки)."
+            },
+            {
+                id: "k",
+                code: "Вітамін K",
+                name: "Філохінон / Менахінон",
+                type: "fat",
+                color: "lime",
+                role: "Зсідання крові (згортання), мінералізація кісткової тканини, здоров'я судин.",
+                dose: "90-120 мкг/день",
+                sources: ["Шпинат", "Кропива", "Броколі", "Петрушка", "Зелений салат"],
+                deficiency: "Повільне зсідання крові, часті синці, кровотечі з носа та ясен.",
+                excess: "Підвищення густоти крові та ризик тромбоутворення.",
+                details: "Частково синтезується корисною мікрофлорою кишечника людини."
+            }
+        ];
+
+        const foodDatabase = [
+            { id: 'f1', name: 'Морква', icon: '🥕', vitamins: { a: 150, c: 10 } },
+            { id: 'f2', name: 'Апельсин', icon: '🍊', vitamins: { c: 90, b1: 10 } },
+            { id: 'f3', name: 'Лосось', icon: '🐟', vitamins: { d: 80, b12: 100, a: 10 } },
+            { id: 'f4', name: 'Мигдаль', icon: '🥜', vitamins: { e: 70, b1: 15 } },
+            { id: 'f5', name: 'Шпинат', icon: '🥬', vitamins: { k: 120, a: 40, c: 20 } },
+            { id: 'f6', name: 'Яйце', icon: '🥚', vitamins: { d: 20, b12: 25, a: 15 } },
+            { id: 'f7', name: 'Болгарський перець', icon: '🫑', vitamins: { c: 150, a: 30 } },
+            { id: 'f8', name: 'Яловича печінка', icon: '🥩', vitamins: { a: 200, b12: 300, d: 15 } },
+            { id: 'f9', name: 'Броколі', icon: '🥦', vitamins: { c: 80, k: 90 } }
+        ];
+
+        const quizQuestions = [
+            {
+                q: "Хто вперше запропонував сам термін «Вітамін» у 1912 році?",
+                options: ["Микола Лунін", "Казимир Функ", "Альберт Сент-Дьйордьї", "Християн Ейкман"],
+                correct: 1,
+                explanation: "Польський біохімік Казимир Функ об'єднав слова 'vita' (життя) та 'amine' (амін)."
+            },
+            {
+                q: "Дефіцит якого вітаміну викликає хворобу під назвою «Цинга»?",
+                options: ["Вітамін A", "Вітамін D", "Вітамін C", "Вітамін B12"],
+                correct: 2,
+                explanation: "Вітамін C (аскорбінова кислота) відповідає за синтез колагену. Його відсутність призводить до цинги."
+            },
+            {
+                q: "Який вітамін синтезується у шкірі під впливом сонячного світла?",
+                options: ["Вітамін D", "Вітамін E", "Вітамін K", "Вітамін B1"],
+                correct: 0,
+                explanation: "Ультрафіолетові промені стимулюють синтез вітаміну D3 з провітамінів у шкірі."
+            },
+            {
+                q: "Які з перелічених вітамінів належать до ЖИРОРОЗЧИННИХ?",
+                options: ["C, B1, B6, B12", "A, D, E, K", "B1, B2, C, PP", "Всі вітаміни є жиророзчинними"],
+                correct: 1,
+                explanation: "Абревіатура ADEK (А, Д, Е, К) запам'ятовується як група жиророзчинних вітамінів."
+            },
+            {
+                q: "Який вітамін міститься майже виключно у продуктах тваринного походження?",
+                options: ["Вітамін C", "Вітамін B12", "Бета-каротин", "Вітамін E"],
+                correct: 1,
+                explanation: "Вітамін B12 створюється бактеріями і накопичується в тваринних продуктах (м'ясо, риба, яйця, молоко)."
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            renderTimeline();
+            renderCatalog('all');
+            initSearch();
+            initCalculator();
+            initBasket();
+            initQuiz();
+            initMobileMenu();
+        });
+
+        function initMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+
+        function renderTimeline() {
+            const container = document.getElementById('timeline-container');
+            container.innerHTML = timelineData.map((item, idx) => {
+                const isEven = idx % 2 === 0;
+                return `
+                <div class="relative flex flex-col lg:flex-row items-center ${isEven ? 'lg:flex-row-reverse' : ''}">
+                    <!-- Timeline Marker Point -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-emerald-500 border-4 border-white shadow-md hidden lg:flex items-center justify-center text-white text-xs font-bold z-10">
+                        ${idx + 1}
+                    </div>
+
+                    <div class="w-full lg:w-1/2 p-4 sm:p-6 ${isEven ? 'lg:pr-12 lg:text-right' : 'lg:pl-12 lg:text-left'} text-center lg:text-left">
+                        <div class="glass-card p-6 rounded-3xl shadow-sm hover:shadow-md transition">
+                            <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-bold rounded-full mb-3">
+                                ${item.year} рік
+                            </span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-1">${item.title}</h3>
+                            <p class="text-xs font-semibold text-teal-600 mb-3">${item.researcher}</p>
+                            <p class="text-slate-600 text-sm leading-relaxed">${item.desc}</p>
+                        </div>
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
+
+        function renderCatalog(filter) {
+            const grid = document.getElementById('vitamin-grid');
+            const filtered = filter === 'all' 
+                ? vitaminsData 
+                : vitaminsData.filter(v => v.type === filter);
+
+            grid.innerHTML = filtered.map(v => `
+                <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider ${v.type === 'water' ? 'text-cyan-600 bg-cyan-50' : 'text-amber-600 bg-amber-50'} px-2.5 py-1 rounded-lg">
+                                    ${v.type === 'water' ? 'Водорозчинний' : 'Жиророзчинний'}
+                                </span>
+                                <h3 class="text-2xl font-extrabold text-slate-900 mt-2">${v.code}</h3>
+                                <p class="text-xs font-medium text-slate-500">${v.name}</p>
+                            </div>
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-lg group-hover:bg-emerald-600 group-hover:text-white transition">
+                                ${v.code.replace('Вітамін ', '')}
+                            </div>
+                        </div>
+
+                        <p class="text-slate-600 text-sm mb-4 line-clamp-3">${v.role}</p>
+
+                        <div class="space-y-2 mb-6">
+                            <div class="text-xs">
+                                <span class="font-semibold text-slate-700">Норма:</span>
+                                <span class="text-slate-500">${v.dose}</span>
+                            </div>
+                            <div class="text-xs">
+                                <span class="font-semibold text-slate-700">Джерела:</span>
+                                <span class="text-slate-500">${v.sources.slice(0, 3).join(', ')}...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="openVitaminModal('${v.id}')" class="w-full py-2.5 bg-slate-100 hover:bg-emerald-50 text-slate-700 hover:text-emerald-700 text-xs font-bold rounded-xl transition flex items-center justify-center gap-2">
+                        <span>Детальніше про вітамін</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            `).join('');
+
+            lucide.createIcons();
+
+            // Filter button states
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-emerald-600', 'text-white', 'shadow-md');
+                if (btn.dataset.filter === filter) {
+                    btn.classList.add('bg-emerald-600', 'text-white', 'shadow-md');
+                }
+            });
+        }
+
+        // Add Click handlers to Filter Buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                renderCatalog(e.target.dataset.filter);
+            });
+        });
+
+        window.openVitaminModal = function(id) {
+            const v = vitaminsData.find(item => item.id === id);
+            if (!v) return;
+
+            const modalContent = document.getElementById('modal-content');
+            modalContent.innerHTML = `
+                <div class="mb-6">
+                    <span class="text-xs font-bold uppercase tracking-wider ${v.type === 'water' ? 'text-cyan-600 bg-cyan-50' : 'text-amber-600 bg-amber-50'} px-3 py-1 rounded-full">
+                        ${v.type === 'water' ? 'Водорозчинний вітамін' : 'Жиророзчинний вітамін'}
+                    </span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-2">${v.code}</h2>
+                    <p class="text-sm font-semibold text-slate-500">${v.name}</p>
+                </div>
+
+                <div class="space-y-6 text-sm text-slate-700">
+                    <div class="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-100">
+                        <h4 class="font-bold text-emerald-900 mb-1 flex items-center gap-2">
+                            <i data-lucide="activity" class="w-4 h-4 text-emerald-600"></i>
+                            Біологічна роль в організмі:
+                        </h4>
+                        <p class="text-slate-700 leading-relaxed">${v.role}</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-100">
+                            <h4 class="font-bold text-rose-900 mb-1 flex items-center gap-1.5">
+                                <i data-lucide="alert-triangle" class="w-4 h-4 text-rose-600"></i>
+                                Гіповітаміноз (Дефіцит):
+                            </h4>
+                            <p class="text-slate-600 text-xs leading-relaxed">${v.deficiency}</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-amber-50/60 border border-amber-100">
+                            <h4 class="font-bold text-amber-900 mb-1 flex items-center gap-1.5">
+                                <i data-lucide="shield-alert" class="w-4 h-4 text-amber-600"></i>
+                                Гіпервітаміноз (Надлишок):
+                            </h4>
+                            <p class="text-slate-600 text-xs leading-relaxed">${v.excess}</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-slate-900 mb-2">Основні харчові джерела:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            ${v.sources.map(src => `<span class="px-3 py-1.5 bg-slate-100 text-slate-700 rounded-xl text-xs font-semibold">${src}</span>`).join('')}
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-slate-100/80 text-xs text-slate-600">
+                        <strong>Цікавий факт / Особливість:</strong> ${v.details}
+                    </div>
+                </div>
+            `;
+
+            lucide.createIcons();
+            document.getElementById('vitamin-modal').classList.remove('hidden');
+        };
+
+        document.getElementById('close-modal').addEventListener('click', () => {
+            document.getElementById('vitamin-modal').classList.add('hidden');
+        });
+
+        function initSearch() {
+            const input = document.getElementById('hero-search');
+            const dropdown = document.getElementById('search-results');
+
+            input.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase().trim();
+                if (!query) {
+                    dropdown.classList.add('hidden');
+                    return;
+                }
+
+                const matches = vitaminsData.filter(v => 
+                    v.code.toLowerCase().includes(query) || 
+                    v.name.toLowerCase().includes(query) ||
+                    v.sources.some(s => s.toLowerCase().includes(query))
+                );
+
+                if (matches.length > 0) {
+                    dropdown.innerHTML = matches.map(v => `
+                        <div onclick="openVitaminModal('${v.id}'); document.getElementById('search-results').classList.add('hidden');" 
+                             class="p-3 hover:bg-emerald-50 cursor-pointer border-b border-slate-100 last:border-none flex items-center justify-between">
+                            <div>
+                                <span class="font-bold text-sm text-slate-800">${v.code}</span>
+                                <span class="text-xs text-slate-500 block">${v.name}</span>
+                            </div>
+                            <span class="text-xs font-semibold text-emerald-600">Деталі →</span>
+                        </div>
+                    `).join('');
+                    dropdown.classList.remove('hidden');
+                } else {
+                    dropdown.innerHTML = `<div class="p-3 text-xs text-slate-400 text-center">Нічого не знайдено</div>`;
+                    dropdown.classList.remove('hidden');
+                }
+            });
+        }
+
+        function initCalculator() {
+            const btn = document.getElementById('calc-btn');
+            btn.addEventListener('click', () => {
+                const age = parseInt(document.getElementById('calc-age').value) || 25;
+                const gender = document.getElementById('calc-gender').value;
+                const activity = document.getElementById('calc-activity').value;
+                const diet = document.getElementById('calc-diet').value;
+
+                let vitC = gender === 'male' ? 90 : 75;
+                let vitD = age > 60 ? 800 : 600; // IU
+                let vitA = gender === 'male' ? 900 : 700; // mcg
+                let vitB12 = 2.4; // mcg
+                let vitE = 15; // mg
+
+                if (activity === 'high') {
+                    vitC += 20;
+                    vitE += 5;
+                }
+
+                document.getElementById('calc-grid').innerHTML = `
+                    <div class="p-3 rounded-xl bg-slate-800 border border-slate-700 text-center">
+                        <span class="text-xs text-slate-400 block">Вітамін C</span>
+                        <span class="text-lg font-bold text-emerald-400">${vitC} мг</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-slate-800 border border-slate-700 text-center">
+                        <span class="text-xs text-slate-400 block">Вітамін D</span>
+                        <span class="text-lg font-bold text-yellow-400">${vitD} МО</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-slate-800 border border-slate-700 text-center">
+                        <span class="text-xs text-slate-400 block">Вітамін A</span>
+                        <span class="text-lg font-bold text-orange-400">${vitA} мкг</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-slate-800 border border-slate-700 text-center">
+                        <span class="text-xs text-slate-400 block">Вітамін B12</span>
+                        <span class="text-lg font-bold text-cyan-400">${vitB12} мкг</span>
+                    </div>
+                    <div class="p-3 rounded-xl bg-slate-800 border border-slate-700 text-center">
+                        <span class="text-xs text-slate-400 block">Вітамін E</span>
+                        <span class="text-lg font-bold text-emerald-300">${vitE} мг</span>
+                    </div>
+                `;
+
+                let advice = "💡 **Порада:** Ваші потреби відповідають базовим фізіологічним нормам. Намагайтеся отримувати більшість вітамінів із різноманітного раціону.";
+                if (diet === 'vegan') {
+                    advice = "⚠️ **Важливо для веганів:** Вітамін B12 практично відсутній у рослинній їжі. Рекомендовано додатковий прийом добавок B12 або збагачених продуктів після консультації з лікарем.";
+                } else if (activity === 'high') {
+                    advice = "🏋️ **Підвищена активність:** Інтенсивні тренування збільшують потребу у вітамінах-антиоксидантах (C, E) та вітамінах групи B для нормального енергообміну.";
+                }
+
+                document.getElementById('calc-advice').innerText = advice;
+                document.getElementById('calc-results').classList.remove('hidden');
+            });
+        }
+
+        let selectedFoods = [];
+
+        function initBasket() {
+            const container = document.getElementById('food-items-container');
+            container.innerHTML = foodDatabase.map(food => `
+                <button onclick="toggleFood('${food.id}')" id="food-btn-${food.id}" class="p-3 rounded-2xl bg-slate-50 border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/50 transition text-left flex items-center space-x-3 group">
+                    <span class="text-2xl">${food.icon}</span>
+                    <div>
+                        <span class="block font-bold text-xs text-slate-800 group-hover:text-emerald-700">${food.name}</span>
+                    </div>
+                </button>
+            `).join('');
+
+            document.getElementById('clear-basket').addEventListener('click', () => {
+                selectedFoods = [];
+                updateBasketUI();
+            });
+        }
+
+        window.toggleFood = function(id) {
+            const index = selectedFoods.indexOf(id);
+            if (index > -1) {
+                selectedFoods.splice(index, 1);
+            } else {
+                selectedFoods.push(id);
+            }
+            updateBasketUI();
+        };
+
+        function updateBasketUI() {
+            const list = document.getElementById('selected-foods-list');
+            const clearBtn = document.getElementById('clear-basket');
+            const summary = document.getElementById('basket-vitamins-summary');
+
+            // Toggle item active states
+            foodDatabase.forEach(food => {
+                const btn = document.getElementById(`food-btn-${food.id}`);
+                if (selectedFoods.includes(food.id)) {
+                    btn.classList.add('border-emerald-500', 'bg-emerald-50');
+                } else {
+                    btn.classList.remove('border-emerald-500', 'bg-emerald-50');
+                }
+            });
+
+            if (selectedFoods.length === 0) {
+                list.innerHTML = `<p id="empty-basket-msg" class="text-xs text-slate-400 m-auto">Натисніть на продукты ліворуч, щоб додати їх сюди</p>`;
+                clearBtn.classList.add('hidden');
+                summary.innerHTML = `<p class="text-xs text-slate-400 italic">Додайте продукти для розрахунку вмісту вітамінів</p>`;
+                return;
+            }
+
+            clearBtn.classList.remove('hidden');
+            list.innerHTML = selectedFoods.map(id => {
+                const food = foodDatabase.find(f => f.id === id);
+                return `
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-100 text-emerald-800 text-xs font-semibold">
+                        <span>${food.icon}</span>
+                        <span>${food.name}</span>
+                        <button onclick="toggleFood('${food.id}')" class="hover:text-rose-600">×</button>
+                    </span>
+                `;
+            }).join('');
+
+            // Calculate accumulated vitamins
+            const totals = {};
+            selectedFoods.forEach(id => {
+                const food = foodDatabase.find(f => f.id === id);
+                Object.entries(food.vitamins).forEach(([vit, val]) => {
+                    totals[vit] = (totals[vit] || 0) + val;
+                });
+            });
+
+            summary.innerHTML = Object.entries(totals).map(([vit, pct]) => `
+                <div>
+                    <div class="flex justify-between text-xs font-semibold mb-1">
+                        <span class="uppercase text-slate-700">Вітамін ${vit}</span>
+                        <span class="text-emerald-600">${pct}% добової норми</span>
+                    </div>
+                    <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                        <div class="bg-emerald-500 h-full transition-all" style="width: ${Math.min(pct, 100)}%"></div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        function initQuiz() {
+            document.getElementById('start-quiz-btn').addEventListener('click', startQuiz);
+            document.getElementById('next-question-btn').addEventListener('click', nextQuestion);
+            document.getElementById('restart-quiz-btn').addEventListener('click', startQuiz);
+        }
+
+        function startQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('quiz-start').classList.add('hidden');
+            document.getElementById('quiz-result').classList.add('hidden');
+            document.getElementById('quiz-body').classList.remove('hidden');
+            showQuestion();
+        }
+
+        function showQuestion() {
+            const q = quizQuestions[currentQuestion];
+            document.getElementById('quiz-progress-text').innerText = `Питання ${currentQuestion + 1} з ${quizQuestions.length}`;
+            document.getElementById('quiz-score-live').innerText = `Бал: ${score}`;
+            document.getElementById('quiz-progress-bar').style.width = `${((currentQuestion + 1) / quizQuestions.length) * 100}%`;
+            document.getElementById('quiz-question').innerText = q.q;
+
+            const optionsContainer = document.getElementById('quiz-options');
+            optionsContainer.innerHTML = q.options.map((opt, idx) => `
+                <button onclick="checkAnswer(${idx})" class="quiz-opt-btn w-full p-4 text-left rounded-2xl bg-white border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/40 font-medium text-slate-800 text-sm transition">
+                    ${opt}
+                </button>
+            `).join('');
+
+            document.getElementById('quiz-explanation').classList.add('hidden');
+            document.getElementById('next-question-btn').classList.add('hidden');
+        }
+
+        window.checkAnswer = function(selectedIdx) {
+            const q = quizQuestions[currentQuestion];
+            const buttons = document.querySelectorAll('.quiz-opt-btn');
+
+            buttons.forEach((btn, idx) => {
+                btn.disabled = true;
+                if (idx === q.correct) {
+                    btn.classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-900', 'font-bold');
+                } else if (idx === selectedIdx) {
+                    btn.classList.add('bg-rose-100', 'border-rose-500', 'text-rose-900');
+                }
+            });
+
+            if (selectedIdx === q.correct) {
+                score += 1;
+            }
+
+            const exp = document.getElementById('quiz-explanation');
+            exp.innerHTML = `<strong>Пояснення:</strong> ${q.explanation}`;
+            exp.classList.remove('hidden');
+
+            document.getElementById('next-question-btn').classList.remove('hidden');
+        };
+
+        function nextQuestion() {
+            currentQuestion++;
+            if (currentQuestion < quizQuestions.length) {
+                showQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            document.getElementById('quiz-body').classList.add('hidden');
+            document.getElementById('quiz-result').classList.remove('hidden');
+            document.getElementById('quiz-final-score').innerText = `Ви набрали ${score} з ${quizQuestions.length} балів.`;
+            
+            let title = "Початківець Нутриціології";
+            if (score === 5) title = "Експерт з Вітамінів 🏆";
+            else if (score >= 3) title = "Знавець Здорового Харчування 🥑";
+
+            document.getElementById('certificate-title').innerText = title;
+        }
+    </script>
+</body>
+</html>
